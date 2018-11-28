@@ -342,7 +342,7 @@ body {
 }
 
 .c-header {
-    background-color: var(--color-alpha);
+    background-image: linear-gradient(var(--color-alpha) 85%, var(--color-alpha-light));
     padding: 25px 20px;
     color: white;
 }
