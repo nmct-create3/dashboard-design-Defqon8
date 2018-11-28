@@ -8,17 +8,16 @@
 
 :root {
     /* colors */
-    --color-alpha-light: MEDIUMSLATEBLUE;
-    --color-alpha: SLATEBLUE;
-
+    --color-alpha-light: #43425D;
+    --color-alpha: #3B3B53;
     --color-neutral-light: LIGHTSLATEGRAY;
     --color-neutral: SLATEGRAY;
     --color-neutral-dark: DARKSLATEGRAY;
-
+    --color-svg-light: #A5A4BF;
+    --color-backrgound: #F0F0F7;
+    --color-hover: #A3A0FB;
     /* Shadows */
-
     /* border radius */
-
     /* transitions */
     --transition-alpha: .1s;
 }
@@ -36,7 +35,7 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: var(--color-neutral-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -44,9 +43,7 @@ html {
     background-color: white;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -90,9 +87,7 @@ img {
     Default markup for typographic elements
 */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -114,32 +109,22 @@ h3 {
     margin: 0 0 24px;
 }
 
-h4,
-h5,
-h6 {
+h4, h5, h6 {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     margin: 0 0 24px;
 }
 
-p,
-ol,
-ul,
-dl,
-table,
-address,
-figure {
+p, ol, ul, dl, table, address, figure {
     margin: 0 0 24px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 24px;
 }
 
-li ul,
-li ol {
+li ul, li ol {
     margin-bottom: 0;
 }
 
@@ -177,18 +162,15 @@ a {
     outline-offset: 2px;
 }
 
-a:visited,
-a:active {
+a:visited, a:active {
     color: var(--color-alpha);
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: var(--color-alpha-light);
 }
 
-label,
-input {
+label, input {
     display: block;
 }
 
@@ -198,6 +180,10 @@ select {
 
 input::placeholder {
     color: var(--color-neutral-light);
+}
+
+body {
+    overflow: hidden;
 }
 
 /*------------------------------------*\
@@ -224,7 +210,8 @@ input::placeholder {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -252,18 +239,14 @@ input::placeholder {
     width: auto;
     overflow: visible;
     background: transparent;
-
     /* inherit font & color from ancestor */
     color: inherit;
     font: inherit;
-
     /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
     line-height: normal;
-
     /* Corrects font smoothing for webkit */
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
-
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
@@ -285,6 +268,18 @@ input::placeholder {
     border: 0;
 }
 
+.o-nav {
+    width: 13.5vw;
+    float: left;
+    background-color: var(--color-alpha-light)
+}
+
+.o-flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
@@ -294,6 +289,123 @@ input::placeholder {
     ---
     Website main logo
 */
+
+.c-nav {
+    background-color: var(--color-alpha-light);
+    padding: 1px 0;
+}
+
+.c-nav ul {
+    padding: 0
+}
+
+.c-nav__item {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    padding: 18px 100% 18px 24px;
+    border-left: 5px solid var(--color-alpha-light);
+    margin: 6px 0;
+    transition: 1500ms;
+}
+
+.c-nav-list {
+    list-style: none;
+}
+
+.c-nav__item:hover {
+    background-color: var(--color-alpha);
+    transition: 250ms;
+    border-left: 5px solid var(--color-hover);
+    box-sizing: border-box;
+    color: white;
+}
+
+.c-nav__item:visited {
+    color: white;
+}
+
+.c-nav__item:hover .c-nav__svg {
+    fill: var(--color-hover);
+}
+
+.c-nav__svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-svg-light);
+    margin-right: 11px;
+}
+
+.c-nav--li {
+    padding: 18px 0px 18px;
+    margin: 6px 0;
+}
+
+.c-header {
+    background-color: var(--color-alpha);
+    padding: 25px 20px;
+    color: white;
+}
+
+.c-header h1 {
+    margin-bottom: 0;
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+
+.c-app {
+    display: grid;
+    grid-template-columns: 260px auto;
+    grid-template-rows: auto 90.3vh;
+}
+
+.c-app__main {
+    background-color: var(--color-backrgound);
+    overflow-y: auto;
+}
+
+.c-app__sidebar {
+    background-color: var(--color-alpha-light);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.c-app__graphs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 30px 74px 74px;
+}
+
+.c-app-grid1, .c-app-grid2, .c-app-grid3, .c-app-grid4, .c-app-grid5, .c-app-grid6 {
+    height: auto;
+    margin: 24px;
+}
+
+.c-app-grid0 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-left: 30px;
+    height: auto;
+    width: 200px;
+}
+
+.c-app-grid4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.c-app-grid5 {
+    grid-column-start: 1;
+    grid-column-end: 3
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 3px 3px 7px grey;
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -311,6 +423,10 @@ input::placeholder {
 
 .u-color-neutral-dark {
     color: var(--color-neutral-dark);
+}
+
+.u-color--background {
+    background-color: var(--color-alpha);
 }
 
 /*
@@ -372,7 +488,6 @@ input::placeholder {
 .u-max-width-none {
     max-width: none !important;
 }
-
 
 /*
     Utilities: align
@@ -437,9 +552,7 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -447,8 +560,7 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -461,15 +573,13 @@ No media query since this is the default in mobile first design
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -480,18 +590,14 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
