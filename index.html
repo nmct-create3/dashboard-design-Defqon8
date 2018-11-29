@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/screen.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -120,10 +121,68 @@
                                 Overview
                             </h2>
                     </div>
-                    <div class="grid-item c-app-grid1"></div>
-                    <div class="grid-item c-app-grid2"></div>
-                    <div class="grid-item c-app-grid3"></div>
+                    <div class="grid-item c-app-grid1">
+                        <canvas class="js-graph" id="jsgraph4"></canvas>
+                        <script src="js/app4.js" charset="utf-8"></script>
+                    </div>
+                    <div class="grid-item c-app-grid2">
+                        <canvas class="js-graph" id="jsgraph2"></canvas>
+                        <script src="js/app2.js" charset="utf-8"></script>
+                    </div>
+                    <div class="grid-item c-app-grid3">
+                        <div class="">
+
+
+                            <div class="">
+                                <canvas class="js-graph" id="jsgraph3"></canvas>
+                                <script src="js/app3.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="grid-item c-app-grid4">
+                        <p class="">
+                            <span class="c-custom-select">
+                                    <select class="c-input c-custom-select__input" class="" name="select" id="select">
+                                        <option value="Maandag">Maandag</option>
+                                        <option value="Dinsdag">Dinsdag</option>
+                                        <option value="Woensdag">Woensdag</option>
+                                        <option value="Donderdag">Donderdag</option>
+                                        <option value="Vrijdag">Vrijdag</option>
+                                        <option value="Zaterdag">Zaterdag</option>
+                                        <option value="Zondag">Zondag</option>
+                                    </select>
+                                    <svg class="c-custom-select__symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.93 62.04">
+                                      <defs>
+                                        <style>
+                                          .a, .b, .c, .d {
+                                            fill: none;
+                                            stroke-miterlimit: 10;
+                                          }
+
+                                          .a, .b {
+                                            stroke: LightGrey;
+                                          }
+
+                                          .a, .c {
+                                            stroke-width: 5px;
+                                          }
+
+                                          .c, .d {
+                                            stroke: LightGrey;
+                                          }
+                                        </style>
+                                      </defs>
+                                      <path class="a" d="M60.57,44.54" transform="translate(-12.94 -38.97)"/>
+                                      <path class="b" d="M17.25,75" transform="translate(-12.94 -38.97)"/>
+                                      <polyline class="c" points="114.11 60.24 60.47 3.55 1.74 60.24"/>
+                                      <path class="d" d="M70.87,70.87" transform="translate(-12.94 -38.97)"/>
+                                      <path class="c" d="M70.39,38.74" transform="translate(-12.94 -38.97)"/>
+                                    </svg>
+                                </span>
+                        </p>
+                        <canvas class="js-graph" id="jsgraph"></canvas>
+                        <script src="js/app.js" charset="utf-8"></script>
                     </div>
                     <div class="grid-item c-app-grid5"></div>
                     <div class="grid-item c-app-grid6"></div>

@@ -303,10 +303,12 @@ body {
     text-decoration: none;
     color: white;
     list-style: none;
-    padding: 18px 100% 18px 24px;
+    padding: 18px 0 18px 24px;
     border-left: 5px solid var(--color-alpha-light);
     margin: 6px 0;
     transition: 1500ms;
+    width: 100%;
+    display: block;
 }
 
 .c-nav-list {
@@ -337,7 +339,6 @@ body {
 }
 
 .c-nav--li {
-    padding: 18px 0px 18px;
     margin: 6px 0;
 }
 
@@ -372,7 +373,7 @@ body {
 
 .c-app__graphs {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33.33333333333333% 33.33333333333333% 33.33333333333333% !important;
     margin: 30px 74px 74px;
 }
 
@@ -386,7 +387,7 @@ body {
     grid-column-end: 4;
     margin-left: 30px;
     height: auto;
-    width: 200px;
+    width: 150 px;
 }
 
 .c-app-grid4 {
@@ -405,6 +406,45 @@ body {
     font-size: 30px;
     text-align: center;
     box-shadow: 3px 3px 7px grey;
+}
+
+.c-custom-select {
+    display: block;
+    width: 200px;
+    position: relative;
+    float: right;
+}
+
+.c-custom-select__symbol {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    pointer-events: none;
+    transform: rotate(180deg);
+}
+
+.js-graph {
+    max-width: 100% !important;
+}
+
+.c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid LightGrey;
+    border-radius: 5px;
+    background-color: #fff;
+    color: grey;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px;
+    outline: none;
+    box-shadow: 1px 1px 8px lightgrey;
+    transition: border grey;
+    max-width: 200px;
 }
 
 /*------------------------------------*\
