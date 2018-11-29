@@ -342,7 +342,7 @@ body {
 }
 
 .c-header {
-    background-image: linear-gradient(var(--color-alpha) 85%, var(--color-alpha-light));
+    background-color: var(--color-alpha);
     padding: 25px 20px;
     color: white;
 }
@@ -356,7 +356,7 @@ body {
 .c-app {
     display: grid;
     grid-template-columns: 260px auto;
-    grid-template-rows: auto 90.3vh;
+    grid-template-rows: auto 100vh;
 }
 
 .c-app__main {
